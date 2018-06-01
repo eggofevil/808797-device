@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Алексей Гурин](https://up.htmlacademy.ru/htmlcss/21/user/808797).
-* Наставник: [Михаил Поданев] (https://htmlacademy.ru/profile/mpodanev)
+* Наставник: [Михаил Поданев](https://htmlacademy.ru/profile/mpodanev)
 
 ---
 
