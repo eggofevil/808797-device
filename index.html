@@ -8,12 +8,16 @@
     <header class="page-header"> 
       <a class="logo"><h1>Device</h1></a>
       <div class="page-header-row-1">
-        <span class="search-form">Форма поиск по сайту</span>
+        <form class="search-form" method="get"  action="#">
+          <button type="submit">Поиск</button>
+          <label for="search" class="hidden">Поле ввода для поиска по сайту</label>
+          <input id="search" name="search" type="search" placeholder="Поиск по сайту">
+        </form>
         <nav class="page-act">
           <ul>
             <li><a class="act-btn" href="#">Войти</a></li>
             <li class="hidden"><a class="act-btn" href="#"><span class="user-name">Валентин Петухов</span></a></li>
-            <li class="hidden"><span>Выйти</span></li>
+            <li class="hidden"><a class="act-btn" href="#">Выйти</a></li>
             <li><a class="act-btn" href="#">Сравнить</a></li>
             <li><a class="act-btn" href="#">Корзина</a></li>
           </ul>
@@ -23,7 +27,7 @@
         <ul>
           <li>
             <a class="nav-btn" href="#">Каталог товаров</a>
-            <img src="http://placehold.it/16x16" width="16" height="16" title="Раскрыть список категорий каталога">
+            <button type="button" class="catalogue-list-open-btn"><p class="hidden">Кнопка - раскрыть список категорий товаров</p></button>
             <ul class="cataloque-list hidden">
               <li><a class="catalogue-nav" href="#">Виртуальная реальность</a></li>
               <li><a class="catalogue-nav" href="catalogue-selfie-monopods.html">Моноподы для селфи</a></li>
@@ -92,7 +96,13 @@
             </tr>
           </table>
         </section>
-        <span class="slider-radio">Форма переключатель слайдов</span>
+        <label for="slide1-btn">Показать слайд 1</label>
+        <input id="slide1-btn" name="slide-1" type="radio" checked>
+        <label for="slide2-btn">Показать слайд 2</label>
+        <input id="slide2-btn" name="slide-2" type="radio">
+        <label for="slide3-btn">Показать слайд 3</label>
+        <input id="slide3-btn" name="slide-3" type="radio">
+        <!--<span class="slider-radio">Форма переключатель слайдов</span>-->
       </div>
       <nav class="categories">
         <ul class="categories-list">
@@ -169,10 +179,10 @@
         </section>
       </div>
       <div class="logos">
-        <a href="#"><img src="img\index\logos\dji-1.png" width="260" height="100" alt="Логотип DJI"></a>
-        <a href="#"><img src="img\index\logos\sp_gadgets-1.png" width="260" height="100" alt="Логотип SP GADGETS"></a>
-        <a href="#"><img src="img\index\logos\gopro-1.png" width="260" height="100" alt="Логотип GoPro"></a>
-        <a href="#"><img src="img\index\logos\vive-1.png" width="260" height="100" alt="Логотип VIVE"></a>
+        <a href="#"><p class="hidden">Показать товыры DJI</p><img src="img\index\logos\dji-1.png" width="260" height="100" alt="Логотип DJI"></a>
+        <a href="#"><p class="hidden">Показать товыры SP GADGETS</p><img src="img\index\logos\sp_gadgets-1.png" width="260" height="100" alt="Логотип SP GADGETS"></a>
+        <a href="#"><p class="hidden">Показать товыры GoPro</p><img src="img\index\logos\gopro-1.png" width="260" height="100" alt="Логотип GoPro"></a>
+        <a href="#"><p class="hidden">Показать товыры VIVE</p><img src="img\index\logos\vive-1.png" width="260" height="100" alt="Логотип VIVE"></a>
       </div>
       <div class="info">
         <section class="about-us">
@@ -191,21 +201,30 @@
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, Вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <img src="img\index\map.png" width="560" height="222" title="Наш офис расположен по адресу: г. Москва, ул. Строителей, 15" alt="Карта с отметкой расположения офиса по адресу: г. Москва, ул. Строителей, 15">
           <a class="btn" href="#">Напишите нам</a>
-          <span class="contact-us hidden">
-            Форма для обратной связи
-            <img src="http://placehold.it/55x55" width="55" height="55" title="Закрыть окно">
-          </span>
+          <form class="contact-us display-none" method="get" action="#">
+            <label>Ваше имя:
+              <input name="name" type="text" placeholder="Имя Фамилия" required>
+            </label>
+            <label>Ваш e-mail:
+              <input name="email" type="email" placeholder="email@example.com" required>
+            </label>
+            <label>Текст письма:
+              <textarea name="text" placeholder="В свободной форме" required></textarea>
+            </label>
+            <button type="submit" class="btn">Отправить</button>
+            <button type="button" class="modal-close"><p class="hidden">Закрыть форму</p></button>
+          </form>
         </section>
       </div>  
     </main>
     <footer class="page-footer">
       <div class="page-footer-row-1">
-        <p class="footer-logo"><b>Device</b></p>
+        <a class="logo footer-logo"><b>Device</b></a>
         <nav class="page-act">
           <ul>
             <li><a class="act-btn" href="#">Войти</a></li>
             <li class="hidden"><a class="act-btn" href="#"><span class="user-name">Валентин Петухов</span></a></li>
-            <li class="hidden"><span>Выйти</span></li>
+            <li class="hidden"><a class="act-btn" href="#">Выйти</a></li>
             <li><a class="act-btn" href="#">Сравнить</a></li>
             <li><a class="act-btn" href="#">Корзина</a></li>
           </ul>
@@ -231,7 +250,7 @@
     </footer>
     <span class="large-map hidden">
       <img src="img\index\map-big.png" width="960" height="559" title="Наш офис расположен по адресу: г. Москва, ул. Строителей, 15" alt="Карта с отметкой расположения офиса по адресу: г. Москва, ул. Строителей, 15">
-      <img src="http://placehold.it/55x55" width="55" height="55" title="Закрыть окно">
+      <button type="button" class="modal-close"><p class="hidden">Закрыть форму</p></button>
     </span>
   </body>
 </html>

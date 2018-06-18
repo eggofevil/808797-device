@@ -6,14 +6,14 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="logo" href="index.html"><h1>Device</h1></a>
+      <a class="logo" href="index.html" title="Вернуться на главную страницу"><h1>Device</h1></a>
       <div class="page-header-row-1">
         <span class="search-form">Форма поиск по сайту</span>
         <nav class="page-act">
           <ul>
             <li><a class="act-btn hidden" href="#">Войти</a></li>
             <li><a class="act-btn" href="#"><span class="user-name">Валентин Петухов</span></a></li>
-            <li><span>Выйти</span></li>
+            <li><a class="act-btn" href="#">Выйти</a></li>
             <li><a class="act-btn" href="#">Сравнить</a></li>
             <li><a class="act-btn" href="#">Корзина</a></li>
           </ul>
@@ -23,7 +23,7 @@
         <ul>
           <li>
             <a class="nav-btn" href="#">Каталог товаров</a>
-            <img src="http://placehold.it/16x16" width="16" height="16" title="Раскрыть список категорий каталога">
+            <button type="button" class="catalogue-list-open-btn"><p class="hidden">Кнопка - раскрыть список категорий товаров</p></button>
             <ul class="cataloque-list hidden">
               <li><a class="catalogue-nav" href="#">Виртуальная реальность</a></li>
               <li><a class="catalogue-nav">Моноподы для селфи</a></li>
@@ -45,7 +45,7 @@
         <nav class="location-tracker">
           <ul>
             <li><a href="index.html">Главная</a><span>></span></li>
-            <li><a href="index.html">Каталог товаров</a><span>></span></li>
+            <li><a href="#">Каталог товаров</a><span>></span></li>
             <li><a>Моноподы для селфи</a></li>
           </ul>
         </nav>
@@ -53,35 +53,72 @@
       <div class="catalogue-div">
         <section class="catalogue-filter">
           <h2>Фильтр</h2>
-          <section class="catalogue-filter-price">
-            <h3>Цена</h3>
-            <span>Ценовой слайдер</span>
-          </section>
-          <section class="catalogue-filter-color">
-            <h3>Цвет</h3>
-            <ul class="catalogue-filter-color-list">
-              <li><span class="checked"><img src="http://placehold.it/27x23" width="27" height="23"></span>Черный</li>
-              <li><span><img src="http://placehold.it/27x23" width="27" height="23"></span>Белый</li>
-              <li><span class="checked"><img src="http://placehold.it/27x23" width="27" height="23"></span>Синий</li>
-              <li><span class="checked"><img src="http://placehold.it/27x23" width="27" height="23"></span>Красный</li>
-              <li><span><img src="http://placehold.it/27x23" width="27" height="23"></span>Розовый</li>
-            </ul>
-          </section>
-          <section class="catalogue-filter-bluetooth">
-            <h3>Bluetooth</h3>
-            <span>Bluetooth radio</span>
-          </section>
-          <span class="btn">Показать</span>
+          <form class="filters" method="get" action="#">
+            <fieldset>
+              <legend>Стоимость</legend>
+              <label class="hidden" for="price-slider-1">Ценовой ползунок 1</label>
+              <input id="price-slider-1" name="price-slider-1" type="range">
+              <label class="hidden" for="price-slider-2">Ценовой ползунок 2</label>
+              <input id="price-slider-2" name="price-slider-2" type="range">
+            </fieldset>
+            <fieldset>
+              <legend>Цвет</legend>
+              <ul class="catalogue-filter-color-list">
+                <li>
+                  <label>
+                    <input name="filter-color" type="checkbox" value="Черный" checked>
+                    Черный
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input name="filter-color" type="checkbox" value="Белый">
+                    Белый
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input name="filter-color" type="checkbox" value="Синий" checked>
+                    Синий
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input name="filter-color" type="checkbox" value="Красный" checked>
+                    Красный
+                  </label>
+                </li>
+                <li>
+                  <label>
+                    <input name="filter-color" type="checkbox" value="Розовый">
+                    Розовый
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Bluetooth</legend>
+              <label>
+                <input name="bluetooth-filter" type="radio" value="Есть" checked>
+                Есть
+              </label>
+              <label>
+                <input name="bluetooth-filter" type="radio" value="Нет">
+                Нет
+              </label>
+            </fieldset>
+            <button class="btn" type="submit">Показать</button>
+          </form>
         </section>
         <div class="catalogue-main-block">
           <section class="catalogue-sort">
             <h2>Сортировка:</h2>
             <ul class="catalogue-sort-list">
-              <li><span class="act-btn active">По цене</span></li>
-              <li><span class="act-btn">По типу</span></li>
-              <li><span class="act-btn">По популярности</span></li>
-              <li><span class="act-btn active">&#9650;</span></li>
-              <li><span class="act-btn">&#9660;</span></li>
+              <li><a class="act-btn active" href="#">По цене</a></li>
+              <li><a class="act-btn" href="#">По типу</a></li>
+              <li><a class="act-btn" href="#">По популярности</a></li>
+              <li><a class="act-btn" href="#"><p class="hidden">Кнопка сортировка по возрастанию</p><!--&#9650;--></a></li>
+              <li><a class="act-btn active" href="#"><p class="hidden">Кнопка сортировка по убыванию</p><!--&#9660;--></a></li>
             </ul>  
           </section>
           <section class="catalogue-item-list">
@@ -92,7 +129,7 @@
               <p class="item-price">500 руб.</p>
               <div class="catalogue-item-card-cover hidden">
                 <a class="btn" href="#">Подробнее</a>
-                <span class="act-btn">Добавить к сравнению</span>
+                <button class="act-btn" type="button">Добавить к сравнению</button>
               </div>
             </section>
             <section class="catalogue-item-card">
@@ -101,7 +138,7 @@
               <p class="item-price">1500 руб.</p>
               <div class="catalogue-item-card-cover hidden">
                 <a class="btn" href="#">Подробнее</a>
-                <span class="act-btn">Добавить к сравнению</span>
+                <button class="act-btn" type="button">Добавить к сравнению</button>
               </div>
             </section>
             <section class="catalogue-item-card">
@@ -110,7 +147,7 @@
               <p class="item-price">2500 руб.</p>
               <div class="catalogue-item-card-cover hidden">
                 <a class="btn" href="#">Подробнее</a>
-                <span class="act-btn">Добавить к сравнению</span>
+                <button class="act-btn" type="button">Добавить к сравнению</button>
               </div>
             </section>
             <section class="catalogue-item-card">
@@ -119,17 +156,18 @@
               <p class="item-price">900 руб.</p>
               <div class="catalogue-item-card-cover hidden">
                 <a class="btn" href="#">Подробнее</a>
-                <span class="act-btn">Добавить к сравнению</span>
+                <button class="act-btn" type="button">Добавить к сравнению</button>
               </div>
             </section>
           </section>
-          <nav class="catalogue-nav">
-            <ul class="catalogue-nav-list">
-              <li><span class="catalogue-nav-btn">Вперед</span></li>
-              <li><span class="catalogue-nav-btn">1</span></li>
-              <li><span class="catalogue-nav-btn">2</span></li>
-              <li><span class="catalogue-nav-btn">3</span></li>
-              <li><span class="catalogue-nav-btn">Назад</span></li>
+          <nav class="catalogue-pagination">
+            <h2 class="hidden">Навигация по страницам отобранных товаров</h2>
+            <ul class="catalogue-pagination-list">
+              <li><a class="catalogue-pagination-btn active" href="#">Вперед</a></li>
+              <li><a class="catalogue-pagination-btn" href="#">1</a></li>
+              <li><a class="catalogue-pagination-btn" href="#">2</a></li>
+              <li><a class="catalogue-pagination-btn" href="#">3</a></li>
+              <li><a class="catalogue-pagination-btn" href="#">Назад</a></li>
             </ul>
           </nav>
         </div>
@@ -137,12 +175,12 @@
     </main>
     <footer class="page-footer">
       <div class="page-footer-row-1">
-        <p class="footer-logo"><b>Device</b></p>
+        <a class="logo footer-logo" href="index.html" title="Вернуться на главную страницу"><b>Device</b></a>
         <nav class="page-act">
           <ul>
-            <li><a class="act-btn hidden" href="#">Войти</a></li>
+            <li class="hidden"><a class="act-btn" href="#">Войти</a></li>
             <li><a class="act-btn" href="#"><span class="user-name">Валентин Петухов</span></a></li>
-            <li><span>Выйти</span></li>
+            <li><a class="act-btn" href="#">Выйти</a></li>
             <li><a class="act-btn" href="#">Сравнить</a></li>
             <li><a class="act-btn" href="#">Корзина</a></li>
           </ul>
@@ -150,13 +188,11 @@
       </div>
       <div class="page-footer-row-2">
         <p class="address">г. Москва, ул. Строителей, 15</p>
-        <nav class="page-nav">
-          <ul>
-            <li><a class="nav-btn" href="#">Доставка</a></li>
-            <li><a class="nav-btn" href="#">Гарантия</a></li>
-            <li><a class="nav-btn" href="#">Контакты</a></li>
-          </ul>
-        </nav>
+        <ul class="services-list">
+          <li><a class="nav-btn" href="#">Доставка</a></li>
+          <li><a class="nav-btn" href="#">Гарантия</a></li>
+          <li><a class="nav-btn" href="#">Контакты</a></li>
+        </ul>
         <p class="phone">+7 (495) 495-95-95</p>
       </div>
       <div class="page-footer-row3">
