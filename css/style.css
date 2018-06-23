@@ -1,28 +1,26 @@
 @font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/gilroyextrabold-webfont.eot');
-    src: url('../fonts/gilroyextrabold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gilroyextrabold-webfont.woff2') format('woff2'),
-         url('../fonts/gilroyextrabold-webfont.woff') format('woff'),
-         url('../fonts/gilroyextrabold-webfont.ttf') format('truetype'),
-         url('../fonts/gilroyextrabold-webfont.svg#gilroyextrabold') format('svg');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroyextrabold-webfont.eot');
+  src: url('../fonts/gilroyextrabold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gilroyextrabold-webfont.woff2') format('woff2'),
+    url('../fonts/gilroyextrabold-webfont.woff') format('woff'),
+    url('../fonts/gilroyextrabold-webfont.ttf') format('truetype'),
+    url('../fonts/gilroyextrabold-webfont.svg#gilroyextrabold') format('svg');
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'Gilroy';
-    src: url('../fonts/gilroylight-webfont.eot');
-    src: url('../fonts/gilroylight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gilroylight-webfont.woff2') format('woff2'),
-         url('../fonts/gilroylight-webfont.woff') format('woff'),
-         url('../fonts/gilroylight-webfont.ttf') format('truetype'),
-         url('../fonts/gilroylight-webfont.svg#gilroylight') format('svg');
-    font-weight: lighter;
-    font-style: normal;
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroylight-webfont.eot');
+  src: url('../fonts/gilroylight-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/gilroylight-webfont.woff2') format('woff2'),
+    url('../fonts/gilroylight-webfont.woff') format('woff'),
+    url('../fonts/gilroylight-webfont.ttf') format('truetype'),
+    url('../fonts/gilroylight-webfont.svg#gilroylight') format('svg');
+  font-weight: lighter;
+  font-style: normal;
 }
-* {
-  outline: none; /*yбрать*/
-}
+
 body {
   font-family: 'Gilroy', sans-serif;
   color: #000000;
@@ -30,7 +28,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 a {
   text-decoration: none;
   color: #000000;
@@ -68,6 +65,21 @@ a {
 .main-btn:active {
   color: rgba(0, 0, 0, 0.3);
 }
+.modal-close-btn {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background: url('../img/index/modal-close.svg') no-repeat;
+  background-size: 55px 55px;
+  font-size: 0;
+  opacity: 0.5;
+}
+.modal-close-btn:hover {
+  opacity: 1;
+}
+.modal-close-btn:active {
+  opacity: 0.3;
+}
 
 /*header & footer*/
 .logo {
@@ -75,9 +87,6 @@ a {
   font-size: 48px;
   line-height: 1;
   text-transform: uppercase;
-}
-page-header-logo {
-  display: inline;
 }
 .logo:hover {
   opacity: 0.6;
@@ -97,6 +106,9 @@ page-header-logo {
 .action:active {
   opacity: 0.3;
 }
+.exit-profile {
+  opacity: 0.3;
+}
 .page-nav-list {
   font-size: 18px;
   line-height: 24px;
@@ -111,13 +123,21 @@ page-header-logo {
   opacity: 0.3;
 }
 
+
 /*header*/
+.page-header {
+  background: #f7e296;
+}
+.page-header-logo {
+  display: inline;
+}
 .search-form {
   font-size: 0;
 }
 .search-form-input {
   font-size: 15px;
   line-height: 2;
+  background: none;
   opacity: 0.3;
   border: none;
 }
@@ -129,14 +149,23 @@ page-header-logo {
   border-bottom: 2px solid #000000;
 }
 .search-form-input:focus + .search-form-button,
+.search-form-button:hover,
+.search-form-button:focus,
 .search-form-button:active {
-  display: inline-block;
+  position: static;
+  clip: auto;
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+.search-form-button {
   font-size: 15px;
   line-height: 2;
   background: none;
   border: 2px solid black;
 }
-.search-form-input:focus + .search-form-button:hover {
+.search-form-button:hover, 
+.search-form-button:focus {
   background: #000000;
   color: #ffffff;
 }
@@ -148,7 +177,6 @@ page-header-logo {
 .category-list:hover {
   position: absolute;
   display: block;
-  background: #f7e296;
 }
 .category-list {
   font-family: 'Open Sans', sans-serif;
@@ -156,6 +184,7 @@ page-header-logo {
   line-height: 36px;
   font-weight: lighter;
   text-transform: none;
+  background: #f7e296;
 }
 .category:hover {
   opacity: 0.6;
@@ -164,9 +193,13 @@ page-header-logo {
   opacity: 0.3;
 }
 
+
 /*main index*/
-.slider {
-  background-color: lightcyan; /*yбрать*/
+
+
+/*items slider*/
+.item-slide {
+  background: #f7e296;
 }
 .item-slide-number {
   font-size: 179.2px;
@@ -202,34 +235,38 @@ page-header-logo {
   font-weight: lighter;
   color: #464646;
 }
-.change-slide-radio {
-  cursor: pointer;
+.radio-btn {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  font-size: 0;
+  background: rgba(70, 70, 70, 0.5);
+  background: url('../img/index/slider/slider-button-empty.svg') no-repeat;
+  background-size: 12px 12px;
 }
-.slide-btn:checked + label, /*cтиль для выбранного радио*/
-.slide-btn[checked] + label { /*стиль для радио отмеченного атрибутом*/
-  background: green; /*убрать*/
+.item-slide-btn:checked + .radio-btn, /*cтиль для выбранного радио*/
+.item-slide-btn[checked]:checked + .radio-btn { /*стиль для радио отмеченного атрибутом*/
+  background: rgba(70, 70, 70, 1);
+  background: url('../img/index/slider/slider-button.svg') no-repeat;
+  background-size: 12px 12px;
 }
-.slide-btn:not(:checked) + label { /*стиль для не выбранного радио */
-  background: none;
+.item-slide-btn:focus + .radio-btn {
+  outline: 2px dashed rgba(70, 70, 70, 0.3);
+  outline-offset: 3px;
 }
-.slide1-btn:checked ~ .item-slide-1 { /*отображаем связанный с выбранным радио блок */
+
+.item-1-btn:checked ~ .item-1-slide,
+.item-2-btn:checked ~ .item-2-slide,
+.item-3-btn:checked ~ .item-3-slide { /*отображаем связанный с выбранным радио блок */
   display: block;
 }
-.slide2-btn:checked ~ .item-slide-2 {
-  display: block;
-}
-.slide3-btn:checked ~ .item-slide-3 {
-  display: block;
-}
-.slide1-btn:not(:checked) ~ .item-slide-1 { /*прячем связанный с не выбранным радио блок */
+.item-1-btn:not(:checked) ~ .item-1-slide,
+.item-2-btn:not(:checked) ~ .item-2-slide,
+.item-3-btn:not(:checked) ~ .item-3-slide { /*прячем связанный с не выбранным радио блок */
   display: none;
 }
-.slide2-btn:not(:checked) ~ .item-slide-2 {
-  display: none;
-}
-.slide3-btn:not(:checked) ~ .item-slide-3 {
-  display: none; /*убрать*/
-}
+
+/*categories*/
 .category-list-main-item {
   font-size: 18px;
   font-weight: bold;
@@ -245,7 +282,370 @@ page-header-logo {
   opacity: 0.3;
 }
 
+/*service slider*/
+.services {
+  background: #e5e5e5;
+}
+.service-slide-btn:checked + .change-slide-radio, /*cтиль для выбранного радио*/
+.service-slide-btn[checked]:checked + .change-slide-radio { /*стиль для радио отмеченного атрибутом*/
+  background: #000000;
+  color: #f7e184;
+}
+.service-slide-btn:focus + .change-slide-radio {
+  outline: 2px dashed rgba(70, 70, 70, 0.3);
+  outline-offset: 3px;
+}
+.delivery-btn:checked ~ .delivery-slide,
+.warranty-btn:checked ~ .warranty-slide,
+.credit-btn:checked ~ .credit-slide { /*отображаем связанный с выбранным радио блок */
+  display: block;
+}
+.delivery-btn:not(:checked) ~ .delivery-slide,
+.warranty-btn:not(:checked) ~ .warranty-slide,
+.credit-btn:not(:checked) ~ .credit-slide { /*прячем связанный с не выбранным радио блок */
+  display: none;
+}
+.services-slide h2 {
+  font-size: 47px;
+  line-height: 1.021;
+}
+.services-slide p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: lighter;
+  color: #464646;
+}
 
+/*logotypes*/
+.logotypes {
+  font-size: 0;
+}
+.brand-logo {
+  display:inline-block;
+  height: 100px;
+  width: 200px;
+  background-size: 200px 100px;
+}
+.dji-href {
+  background-image: url('../img/index/logos/dji-1.png');
+}
+.dji-href:hover {
+  background-image: url('../img/index/logos/dji.png');
+}
+.spgadgets-href {
+  background-image: url('../img/index/logos/sp_gadgets-1.png');
+}
+.spgadgets-href:hover {
+  background-image: url('../img/index/logos/sp_gadgets.png');
+}
+.gopro-href {
+  background-image: url('../img/index/logos/gopro-1.png');
+}
+.gopro-href:hover {
+  background-image: url('../img/index/logos/gopro.png');
+}
+.vive-href {
+  background-image: url('../img/index/logos/vive-1.png');
+}
+.vive-href:hover {
+  background-image: url('../img/index/logos/vive.png');
+}
+
+/*info*/
+.about-us h2,
+.contacts h2 {
+  font-size: 47px;
+  line-height: 1.021;
+}
+.about-us p,
+.contacts p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: lighter;
+  color: #464646;
+}
+.large-map-btn:focus + .large-map-radio {
+  outline: 2px dashed rgba(70, 70, 70, 0.3);
+  outline-offset: 3px;
+}
+.large-map-btn:checked ~ .large-map {
+  display: block;
+}
+.large-map-close-btn:checked ~ .large-map {
+  display: none;
+}
+.large-map {
+  position: fixed;
+  top: 15%;
+}
+.about-us-list {
+  font-size: 16px;
+  line-height: 2.5;
+  font-weight: bold;
+  color: #e5e5e5;
+  list-style: circle;
+}
+.about-us-list span {
+  color: #000000;
+}
+
+/*write-us-form*/
+.write-us-btn:focus + .write-us-radio {
+  outline: 2px dashed rgba(70, 70, 70, 0.3);
+  outline-offset: 3px;
+}
+.write-us-btn:checked ~ .write-us-form {
+  display: block;
+}
+.write-us-close-btn:checked ~ .write-us-form {
+  display: none;
+}
+.write-us-form {
+  background: #ffffff;
+  position: fixed;
+  top: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.333;
+}
+.write-us-field {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.285;
+  color: rgba(70, 70, 70, 0.5);
+  background: rgba(229, 229, 220, 0.5);
+  border: none;
+}
+.write-us-field:hover {
+  background: rgba(229, 229, 220, 0.8);
+}
+.write-us-field:focus {
+  color: rgb(70, 70, 70);
+  background: none;
+  outline: 3px solid #f0c52e;
+}
+.write-us-submit:active ~ .write-us-field:invalid {
+  color: rgba(70, 70, 70, 0.4);
+  background: rgba(237, 181, 181, 0.5);
+}
+
+
+/*main selfie-monopods catalogue*/
+
+/*header-block*/
+.selfie-monopods-header {
+  font-size: 47px;
+  font-weight: bold;
+  line-height: 1.021;
+}
+.location-tracker-list {
+  font-size: 14px;
+  font-family: "Open Sans";
+  line-height: 1.714;
+}
+.location-tracker-list li {
+  display: inline-block;
+}
+.location-tracker-item {
+  color: rgba(0, 0, 0, 0.3);
+}
+.location-tracker-separator {
+  width: 4px;
+  height: 7px;
+  background: url('../img/catalogue/nav-arrow.svg') no-repeat;
+}
+
+/*filter*/
+.catalogue-filter {
+  background: #efefef;
+}
+.catalogue-filter-header {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+}
+.filter-fieldset {
+  border: none;
+  border-top: 2px solid #000000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: 2.857;
+}
+.fieldset-header {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.333;
+}
+.filter-range:hover {
+  cursor: pointer;
+}
+.filter-checkbox:focus + .filter-checkbox-btn {
+  outline: 2px dashed rgba(70, 70, 70, 0.3);
+  outline-offset: 3px; 
+}
+.filter-radio:focus + .filter-radio-btn {
+  outline: 2px dashed rgba(70, 70, 70, 0.3);
+  outline-offset: 3px;
+}
+.filter-checkbox-btn::before {
+  content:'';
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+  background: url('../img/catalogue/filter/checkbox-off.svg');
+  margin-right: 5px;
+}
+.filter-radio-btn::before {
+  content:'';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url('../img/catalogue/filter/radio-off.svg');
+  margin-right: 5px;
+}
+.filter-checkbox:not(:disabled) + .filter-checkbox-btn:hover::before,
+.filter-radio:not(:disabled) + .filter-radio-btn:hover::before {
+  opacity: 0.6;
+}
+.filter-checkbox:disabled + .filter-checkbox-btn,
+.filter-radio:disabled + .filter-radio-btn {
+  opacity: 0.25;
+}
+.filter-checkbox:checked + .filter-checkbox-btn::before {
+  width: 27px;
+  margin-right: 3px;
+  background: url('../img/catalogue/filter/checkbox-on.svg');
+}
+.filter-radio:checked + .filter-radio-btn::before {
+  background: url('../img/catalogue/filter/radio-on.svg');
+}
+
+
+/* catalogue main block */
+
+.catalogue-main-block .catalogue-active-btn {
+  opacity: 1;
+}
+
+/*sort panel*/
+.sort-panel {
+  background: #ebebeb;
+}
+.sort-panel-header {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+}
+.sort-btn {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.286;
+  text-align: left;
+  letter-spacing: 0.252px;
+}
+.sort-btn {
+  opacity: 0.3;
+}
+.sort-btn.active {
+  opacity: 1;
+}
+.increase-btn,
+.decrease-btn {
+  font-size: 0;
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+}
+.increase-btn {
+  background: url('../img/catalogue/sort/icon-up-dir.svg');
+}
+.decrease-btn {
+  background: url('../img/catalogue/sort/icon-down-dir.svg');
+}
+.sort-btn:hover {
+  opacity: 0.6;
+}
+.sort-btn:active {
+  opacity: 1;
+}
+
+/*catalogue panel*/
+
+.item-card {
+  display: inline-block;
+  font-size: 0;
+}
+.item-card:hover > img {
+  position: absolute;
+  z-index: -1;
+}
+.item-card:hover > .item-actions {
+  display:block;
+  height: 380px;
+  width: 360px;
+  background: rgba(238, 238, 238, 0.7);
+}
+.compare-btn {
+  display: block;
+  border: none;
+  background: none;
+  font-size: 13px;
+  font-weight: lighter;
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 2.769;
+  letter-spacing: 0.13px;
+}
+.compare-btn:hover {
+  color: rgb(0, 0, 0);
+}
+.compare-btn:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+.item-description {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.333;
+  letter-spacing: 0.18px;
+}
+.item-price {
+  font-size: 16px;
+  font-weight: lighter;
+  color: rgb(70, 70, 70);
+  line-height: 1.5;
+}
+
+/*pagination panel*/
+.pagination-panel {
+  background: #ebebeb;
+}
+.pagination-btn {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 3.2px;
+  font-weight: bold;
+}
+.pagination-btn:not(.back-forward-btn) {
+  opacity: 0.3;
+}
+.pagination-btn.active {
+  opacity: 1;
+}
+.back-forward-btn:hover {
+  background: #d9d9d9;
+}
+.back-forward-btn:active {
+  background: #d9d9d9;
+  color: rgba(0, 0, 0, 0.3);
+}
 
 /*footer*/
 .page-footer {
@@ -269,13 +669,33 @@ page-header-logo {
   color: #ffffff;
 }
 .social-btn {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
   opacity: 0.3;
+  font-size: 0;
 }
 .social-btn:hover {
   opacity: 0.6;
 }
 .social-btn:active {
   opacity: 0.1;
+}
+.facebook-btn {
+  background: url('../img/header-footer/facebook.svg') no-repeat;
+}
+.instagram-btn {
+  background: url('../img/header-footer/instagram.svg') no-repeat;
+}
+.twitter-btn {
+  background: url('../img/header-footer/twitter.svg') no-repeat;
+}
+.htmlacademy-logo {
+  display: inline-block;
+  width: 27px;
+  height: 35px;
+  font-size: 0;
+  fill: #f7c003;
 }
 .htmlacademy-logo:hover {
   opacity: 0.6;

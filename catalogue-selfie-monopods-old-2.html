@@ -62,9 +62,9 @@
           <fieldset class="filter-fieldset price-fieldset">
             <h3 class="fieldset-header">Стоимость</h3>
             <label class="hidden" for="price-slider-1">Ценовой ползунок 1</label>
-            <input id="price-slider-1" class="filter-range" name="price-slider-1" type="range">
+            <input id="price-slider-1" name="price-slider-1" type="range">
             <label class="hidden" for="price-slider-2">Ценовой ползунок 2</label>
-            <input id="price-slider-2" class="filter-range" name="price-slider-2" type="range">
+            <input id="price-slider-2" name="price-slider-2" type="range">
           </fieldset>
           <fieldset class="filter-fieldset color-fieldset">
             <h3 class="fieldset-header">Цвет</h3>
@@ -111,52 +111,44 @@
               <li><a class="sort-btn decrease-btn" href="#" title="Сортировать по убыванию">Сортировать по убыванию</a></li>
             </ul>  
           </section>
-          <section class="catalogue-item-list">
+          <section class="catalogue-panel">
             <h2 class="hidden">Каталог</h2>
-            <figure class="item-card">
+            <section class="item-card">
               <img src="img/catalogue/item-list/item-1.jpg" width="360" height="380" alt="Изображение товара &quot;Любительская селфи-палка&quote;">
-              <div class="item-actions display-none">
-                <button class="main-btn" type="button">В корзину</button>
-                <button class="compare-btn" type="button">Добавить к сравнению</button>
+              <h3>Любительская селфи-палка</h3>
+              <p class="item-price">500 руб.</p>
+              <div class="catalogue-item-card-cover hidden">
+                <a class="main-btn" href="#">Подробнее</a>
+                <button class="act-btn" type="button">Добавить к сравнению</button>
               </div>
-              <figcaption class="item-description">
-                <a href="#">Любительская селфи-палка</a>
-                <span class="item-price">500 руб.</span>
-              </figcaption>
-            </figure>
-            <figure class="item-card">
+            </section>
+            <section class="item-card">
               <img src="img/catalogue/item-list/item-2.jpg" width="360" height="380" alt="Изображение товара &quot;Профессиональная селфи-палка&quote;">
-              <div class="item-actions display-none">
-                <button class="main-btn" type="button">В корзину</button>
-                <button class="compare-btn" type="button">Добавить к сравнению</button>
+              <h3>Профессиональная селфи-палка</h3>
+              <p class="item-price">1500 руб.</p>
+              <div class="catalogue-item-card-cover hidden">
+                <a class="main-btn" href="#">Подробнее</a>
+                <button class="act-btn" type="button">Добавить к сравнению</button>
               </div>
-              <figcaption class="item-description">
-                <a href="#">Профессиональная селфи-палка</a>
-                <span class="item-price">1500 руб.</span>
-              </figcaption>
-            </figure>
-            <figure class="item-card">
-              <img src="img/catalogue/item-list/item-3.jpg" width="360" height="380" alt="Изображение товара &quot;Непотопляемая селфи-палка&quote;">
-              <div class="item-actions display-none">
-                <button class="main-btn" type="button">В корзину</button>
-                <button class="compare-btn" type="button">Добавить к сравнению</button>
+            </section>
+            <section class="item-card">
+              <img src="img/catalogue/item-list/item-3.jpg" width="360" height="380" alt="Изображение товара &quot;Непотопляемая селфи-палка;">
+              <h3>Непотопляемая селфи-палка</h3>
+              <p class="item-price">2500 руб.</p>
+              <div class="catalogue-item-card-cover hidden">
+                <a class="main-btn" href="#">Подробнее</a>
+                <button class="act-btn" type="button">Добавить к сравнению</button>
               </div>
-              <figcaption class="item-description">
-                <a href="#">Непотопляемая селфи-палка</a>
-                <span class="item-price">2500 руб.</span>
-              </figcaption>
-            </figure>
-            <figure class="item-card">
-              <img src="img/catalogue/item-list/item-4.jpg" width="360" height="380" alt="Изображение товара &quot;Селфи-палка «Следуй за мной»&quote;">
-              <div class="item-actions display-none">
-                <button class="main-btn" type="button">В корзину</button>
-                <button class="compare-btn" type="button">Добавить к сравнению</button>
+            </section>
+            <section class="item-card">
+              <img src="img/catalogue/item-list/item-4.jpg" width="360" height="380" alt="Изображение товара &quot;Селфи-палка «Следуй за мной»;">
+              <h3>Селфи-палка «Следуй за мной»</h3>
+              <p class="item-price">900 руб.</p>
+              <div class="catalogue-item-card-cover hidden">
+                <a class="main-btn" href="#">Подробнее</a>
+                <button class="act-btn" type="button">Добавить к сравнению</button>
               </div>
-              <figcaption class="item-description">
-                <a href="#">Селфи-палка «Следуй за мной»</a>
-                <span class="item-price">900 руб.</span>
-              </figcaption>
-            </figure>
+            </section>
           </section>
           <section class="pagination-panel">
             <h2 class="hidden">Навигация по страницам отобранных товаров</h2>
