@@ -548,15 +548,21 @@ a {
   background: url('../img/catalogue/nav-arrow.svg') no-repeat;
 }
 
+.catalogue-div {
+  display: flex;
+}
 /*filter*/
 .catalogue-filter {
   background: #efefef;
+  flex-basis: 468px;
 }
 .catalogue-filter-header {
+  display: block;
   font-size: 16px;
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: 3.2px;
+  background: #dcdcdc;
 }
 .filter-fieldset {
   border: none;
@@ -625,6 +631,10 @@ a {
 
 /*sort panel*/
 .sort-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 72px;
   background: #ebebeb;
 }
 .sort-panel-header {
@@ -632,6 +642,9 @@ a {
   text-transform: uppercase;
   line-height: 1.5;
   letter-spacing: 3.2px;
+}
+.sort-panel li {
+  display: inline-block;
 }
 .sort-btn {
   font-size: 14px;
@@ -667,20 +680,33 @@ a {
 }
 
 /*catalogue panel*/
-
+.catalogue-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 72px;
+}
 .item-card {
-  display: inline-block;
+  flex-basis: 360px;
+  margin: 0;
+  padding-top: 30px;
   font-size: 0;
+}
+.item-actions {
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 380px;
+  width: 360px;
+  background: rgba(238, 238, 238, 0.7);
 }
 .item-card:hover > img {
   position: absolute;
   z-index: -1;
 }
 .item-card:hover > .item-actions {
-  display:block;
-  height: 380px;
-  width: 360px;
-  background: rgba(238, 238, 238, 0.7);
+  display: flex;
 }
 .compare-btn {
   display: block;
@@ -714,7 +740,15 @@ a {
 
 /*pagination panel*/
 .pagination-panel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 72px;
   background: #ebebeb;
+}
+.pagination-panel li {
+  display: inline-block;
 }
 .pagination-btn {
   font-size: 16px;

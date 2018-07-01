@@ -18,9 +18,9 @@
           <input id="search" class="action search-form-input" name="search" type="text" placeholder="Поиск по сайту">
           <button class="search-form-button display-none" type="submit">Поиск</button>
         </form>
-        <a class="action" href="#">Войти</a>
-        <a class="action display-none" href="#">Валентин Петухов</a>
-        <a class="action exit-profile display-none" href="#">Выйти</a>
+        <a class="action display-none" href="#">Войти</a>
+        <a class="action" href="#">Валентин Петухов</a>
+        <a class="action exit-profile" href="#">Выйти</a>
         <a class="action" href="#">Сравнить</a>
         <a class="action cart" href="#">Корзина</a>
       </div>
@@ -31,7 +31,7 @@
             <div class="category-list display-none">
               <ul class="list category-list-col1">
                 <li><a class="category" href="#">Виртуальная реальность</a></li>
-                <li><a class="category" href="catalogue-selfie-monopods.html">Моноподы для селфи</a></li>
+                <li><a class="category">Моноподы для селфи</a></li>
                 <li><a class="category" href="#">Экшн-камеры</a></li>
               </ul>
               <ul class="list category-list-col2">
@@ -111,14 +111,14 @@
               <li><a class="sort-btn active" href="#">По цене</a></li>
               <li><a class="sort-btn" href="#">По типу</a></li>
               <li><a class="sort-btn" href="#">По популярности</a></li>
-              <li><a class="sort-btn increase-btn" href="#" title="Сортировать по возрастанию">Сортировать по возрастанию</a></li>
-              <li><a class="sort-btn decrease-btn" href="#" title="Сортировать по убыванию">Сортировать по убыванию</a></li>
-            </ul>  
+            </ul>
+            <a class="sort-btn increase-btn active" href="#" title="Сортировать по возрастанию">Сортировать по возрастанию</a>
+            <a class="sort-btn decrease-btn" href="#" title="Сортировать по убыванию">Сортировать по убыванию</a>
           </section>
-          <section class="catalogue-item-list">
+          <section class="catalogue-panel">
             <h2 class="hidden">Каталог</h2>
             <figure class="item-card">
-              <img src="img/catalogue/item-list/item-1.jpg" width="360" height="380" alt="Изображение товара &quot;Любительская селфи-палка&quote;">
+              <img src="img/catalogue/item-list/item-1.jpg" width="360" height="380" alt="Изображение товара&quot; Любительская селфи-палка&quot;">
               <div class="item-actions display-none">
                 <button class="main-btn" type="button">В корзину</button>
                 <button class="compare-btn" type="button">Добавить к сравнению</button>
@@ -129,7 +129,7 @@
               </figcaption>
             </figure>
             <figure class="item-card">
-              <img src="img/catalogue/item-list/item-2.jpg" width="360" height="380" alt="Изображение товара &quot;Профессиональная селфи-палка&quote;">
+              <img src="img/catalogue/item-list/item-2.jpg" width="360" height="380" alt="Изображение товара &quot;Профессиональная селфи-палка&quot;">
               <div class="item-actions display-none">
                 <button class="main-btn" type="button">В корзину</button>
                 <button class="compare-btn" type="button">Добавить к сравнению</button>
@@ -140,7 +140,7 @@
               </figcaption>
             </figure>
             <figure class="item-card">
-              <img src="img/catalogue/item-list/item-3.jpg" width="360" height="380" alt="Изображение товара &quot;Непотопляемая селфи-палка&quote;">
+              <img src="img/catalogue/item-list/item-3.jpg" width="360" height="380" alt="Изображение товара &quot;Непотопляемая селфи-палка&quot;">
               <div class="item-actions display-none">
                 <button class="main-btn" type="button">В корзину</button>
                 <button class="compare-btn" type="button">Добавить к сравнению</button>
@@ -151,7 +151,7 @@
               </figcaption>
             </figure>
             <figure class="item-card">
-              <img src="img/catalogue/item-list/item-4.jpg" width="360" height="380" alt="Изображение товара &quot;Селфи-палка «Следуй за мной»&quote;">
+              <img src="img/catalogue/item-list/item-4.jpg" width="360" height="380" alt="Изображение товара &quot;Селфи-палка «Следуй за мной»&quot;">
               <div class="item-actions display-none">
                 <button class="main-btn" type="button">В корзину</button>
                 <button class="compare-btn" type="button">Добавить к сравнению</button>
@@ -164,20 +164,20 @@
           </section>
           <section class="pagination-panel">
             <h2 class="hidden">Навигация по страницам отобранных товаров</h2>
+            <a class="pagination-btn back-forward-btn" href="#">Вперед</a>
             <ul class="list pagination-btn-list">
-              <li><a class="pagination-btn back-forward-btn" href="#">Вперед</a></li>
               <li><a class="pagination-btn active" href="#">1</a></li>
               <li><a class="pagination-btn" href="#">2</a></li>
               <li><a class="pagination-btn" href="#">3</a></li>
-              <li><a class="pagination-btn back-forward-btn" href="#">Назад</a></li>
             </ul>
+            <a class="pagination-btn back-forward-btn" href="#">Назад</a>
           </section>
         </div>
       </div>
     </main>
     <footer class="page-footer">
       <div class="footer-col-1">
-        <a><span class="logo page-footer-logo">Device</span></a>
+        <a href="index.html" title="Вернуться на главную"><span class="logo page-footer-logo">Device</span></a>
         <p class="address">г. Москва, ул. Строителей, 15</p>
         <div class="footer-decoration"></div>
       </div>
@@ -195,9 +195,9 @@
       </div>
       <div class="footer-col-3">
         <span class="footer-actions">
-          <a class="action" href="#">Войти</a>
-          <a class="action display-none" href="#">Валентин Петухов</a>
-          <a class="action exit-profile display-none" href="#">Выйти</a>
+          <a class="action display-none" href="#">Войти</a>
+          <a class="action" href="#">Валентин Петухов</a>
+          <a class="action exit-profile" href="#">Выйти</a>
           <a class="action" href="#">Сравнить</a>
           <a class="action" href="#">Корзина</a>
         </span>
