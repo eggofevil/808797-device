@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Девайс - главная</title>
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="x-rim-auto-match" content="none">
@@ -14,54 +15,53 @@
       <a><h1 class="logo page-header-logo">Device</h1></a>
       <div class="header-actions">
         <form class="search-form" method="get" action="#" autocomplete="off">
-          <label for="search" class="search-form-label">Поле ввода для поиска по сайту</label>
+          <label for="search" class="hidden">Поле ввода для поиска по сайту</label>
           <input id="search" class="action search-form-input" name="search" type="text" placeholder="Поиск по сайту">
-          <button class="search-form-button hidden" type="submit">Найти</button>
-          <div class="search-form-border display-none"></div>
+          <button class="search-form-button display-none" type="submit">Поиск</button>
         </form>
-        <a class="action-header action-href login-header" href="login.html"><span>Войти</span></a>
-        <a class="action-header profile-header display-none" href="profile.html">Валентин Петухов</a>
-          <a class="action-header logout-header display-none" href="#logout">Выйти</a>
-          <a class="action-header compare-header" href="compare.html">Сравнить</a>
-          <a class="action-header cart-header" href="cart.html">Корзина</a>
+        <a class="action" href="#">Войти</a>
+        <a class="action display-none" href="#">Валентин Петухов</a>
+        <a class="action exit-profile display-none" href="#">Выйти</a>
+        <a class="action" href="#">Сравнить</a>
+        <a class="action cart" href="#">Корзина</a>
       </div>
       <nav class="page-nav">
         <ul class="list page-nav-list">
           <li class="category-list-trigger">
-            <a class="nav-btn" href="catalogue.html">Каталог товаров</a>
+            <a class="nav-btn" href="#">Каталог товаров</a>
             <div class="category-list display-none">
               <ul class="list category-list-col1">
-                <li><a class="category" href="catalogue-virtual-reality.html">Виртуальная реальность</a></li>
+                <li><a class="category" href="#">Виртуальная реальность</a></li>
                 <li><a class="category" href="catalogue-selfie-monopods.html">Моноподы для селфи</a></li>
-                <li><a class="category" href="catalogue-action-cams.html">Экшн-камеры</a></li>
+                <li><a class="category" href="#">Экшн-камеры</a></li>
               </ul>
               <ul class="list category-list-col2">
-                <li><a class="category" href="catalogue-fitness-bracelets.html">Фитнес-браслеты</a></li>
-                <li><a class="category" href="catalogue-smart-watches.html">Умные часы</a></li>
+                <li><a class="category" href="#">Фитнес-браслеты</a></li>
+                <li><a class="category" href="#">Умные часы</a></li>
               </ul>
               <ul class="list category-list-col3">
-                <li><a class="category" href="catalogue-quadcopters.html">Квадрокоптеры</a></li>
+                <li><a class="category" href="#">Квадрокоптеры</a></li>
               </ul>
             </div>
           </li>  
-          <li><a class="nav-btn delivery-nav-btn" href="delivery.html">Доставка</a></li>
-          <li><a class="nav-btn warranty-nav-btn" href="warranty.html">Гарантия</a></li>
-          <li><a class="nav-btn" href="contacts.html">Контакты</a></li>
+          <li><a class="nav-btn" href="#">Доставка</a></li>
+          <li><a class="nav-btn" href="#">Гарантия</a></li>
+          <li><a class="nav-btn" href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
     <main>    
       <div class="slider">
-        <div class="slider-decoration"></div>
         <input id="item-1-btn" class="item-slide-btn item-1-btn hidden" name="item-slide-btn" type="radio" checked>
         <label class="change-slide-radio radio-btn" for="item-1-btn">Показать слайд 1</label>
         <input id="item-2-btn" class="item-slide-btn item-2-btn hidden" name="item-slide-btn" type="radio">
         <label class="change-slide-radio radio-btn" for="item-2-btn">Показать слайд 2</label>
         <input id="item-3-btn" class="item-slide-btn item-3-btn hidden" name="item-slide-btn" type="radio">
         <label class="change-slide-radio radio-btn" for="item-3-btn">Показать слайд 3</label>
-        <article class="item-slide item-1-slide">
+        
+        <figure class="item-slide item-1-slide">
           <img src="img/index/slider/slide-1.png" width="384" height="486" alt="Фотография самой длинной палки для селфи">
-          <div class="slide-description">
+          <figcaption>
             <p class="item-slide-number">01</p>
             <h2 class="item-slide-header">Делай селфи, как Бен Стиллер!</h2>
             <p class="item-slide-short-info">Самая длинная палка для селфи доступна в нашем магазине. Восемь! (Восемь, Карл!) метров длинной и весом всего 5 килограмм.</p>
@@ -78,11 +78,12 @@
                 <th class="feature-name">Материал</th>
               </tr>
             </table>
-          </div>
-        </article>
-        <article class="item-slide item-2-slide">
+          </figcaption>
+        </figure>
+        <figure class="item-slide item-2-slide">
           <img src="img/index/slider/slide-2.png" width="345" height="485" alt="Фотография фитнес-браслета">
-          <div class="slide-description">
+          <!--<img src="img\index\slider\slide-2.png" width="345" height="485" alt="Фотография фитнес-браслета">-->
+          <figcaption>
             <p class="item-slide-number">02</p>
             <h2 class="item-slide-header">Худеем правильно!</h2>
             <p class="item-slide-short-info">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
@@ -95,11 +96,11 @@
                 <th class="feature-name">Без подзарядки</th>
               </tr>
             </table>
-          </div>
-        </article>
-        <article class="item-slide item-3-slide">
+          </figcaption>
+        </figure>
+        <figure class="item-slide item-3-slide">
           <img src="img/index/slider/slide-3.png" width="526" height="334" alt="Фотография квадрокоптера">
-          <div class="slide-description">
+          <figcaption>
             <p class="item-slide-number">03</p>
             <h2 class="item-slide-header">Порхает как бабочка, жалит как пчела!</h2>
             <p class="item-slide-short-info">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
@@ -114,8 +115,8 @@
                 <th class="feature-name">Радиус поражения</th>
               </tr>
             </table>
-          </div>
-        </article>
+          </figcaption>
+        </figure>
       </div>
       <ul class="list category-list-main">
         <li>
@@ -219,56 +220,55 @@
           <input id="large-map-close-btn" name="large-map" class="large-map-close-btn hidden" type="radio">
           <div class="large-map display-none">
             <img src="img/index/map-big.png" width="960" height="559" title="Наш офис расположен по адресу: г. Москва, ул. Строителей, 15" alt="Карта с отметкой расположения офиса по адресу: г. Москва, ул. Строителей, 15">
-            <label for="large-map-close-btn" class="modal-close-btn large-map-close">Закрыть карту</label>
+            <div><label for="large-map-close-btn" class="modal-close-btn">Закрыть карту</label></div>
           </div>
           <input id="write-us-btn" name="write-us-form-btns" class="write-us-btn hidden" type="radio">
           <label for="write-us-btn" class="write-us-radio info-btn main-btn">Напишите нам</label>
-          <input id="write-us-close-btn" name="write-us-form-btns" class="hidden" type="radio">
+          <input id="write-us-close-btn" name="write-us-form-btns" class="write-us-close-btn hidden" type="radio">
           <form class="write-us-form display-none" method="get" action="#" autocomplete="off">
-            <label for="write-us-close-btn" class="modal-close-btn write-us-close-btn">Закрыть форму</label>
+            <label for="write-us-close-btn" class="modal-close-btn">Закрыть форму</label>
             <button type="submit" class="main-btn write-us-submit">Отправить</button>
-            <label for="name" class="name-input write-us-label"><p>Ваше имя:</p>
-              <input id="name" name="name" class="write-us-field" type="text" placeholder="Имя Фамилия" required>
-            </label>
-            <label for="email" class="email-input write-us-label"><p>Ваш e-mail:</p>
-              <input id="email" name="email" class="write-us-field" type="email" placeholder="email@example.com" required>
-            </label>
-            <div class="clearfix"></div>
-            <label for="msg" class="msg-input write-us-label"><p>Текст письма:</p>
-              <textarea id="msg" name="msg" class="write-us-field" placeholder="В свободной форме" required></textarea>
-            </label>
-            
+            <label for="name">Ваше имя:</label>
+            <input id="name" name="name" class="write-us-field" type="text" placeholder="Имя Фамилия" required>
+            <label for="email">Ваш e-mail:</label>
+            <input id="email" name="email" class="write-us-field" type="email" placeholder="email@example.com" required>
+            <label for="msg">Текст письма:</label>
+            <textarea id="msg" name="msg" class="write-us-field" placeholder="В свободной форме" required></textarea>
           </form>
         </section>
       </div>  
     </main>
     <footer class="page-footer">
       <div class="page-footer-row">
-        <a class="logo page-footer-logo">Device</a>
-        <a class="action-footer login-footer" href="login.html"><span>Войти</span></a>
-        <a class="action-footer profile-footer display-none" href="profile.html"><span>Валентин Петухов</span></a>
-        <a class="action-footer logout-footer display-none" href="#logout"><span>Выйти</span></a>
-        <a class="action-footer compare-footer" href="compare.html"><span>Сравнить</span></a>
-        <a class="action-footer cart-footer" href="cart.html"><span>Корзина</span></a>
+        <a><span class="logo page-footer-logo">Device</span></a>
+        <span class="footer-actions">
+          <a class="action" href="#">Войти</a>
+          <a class="action display-none" href="#">Валентин Петухов</a>
+          <a class="action exit-profile display-none" href="#">Выйти</a>
+          <a class="action" href="#">Сравнить</a>
+          <a class="action" href="#">Корзина</a>
+        </span>
       </div>
-      <div class="page-footer-row footer-row-2">
+      <div class="page-footer-row">
         <p class="address">г. Москва, ул. Строителей, 15</p>
         <ul class="list footer-nav-list">
-          <li><a class="nav-btn footer-nav-btn" href="delivery.html">Доставка</a></li>
-          <li><a class="nav-btn footer-nav-btn" href="warranty.html">Гарантия</a></li>
-          <li><a class="nav-btn footer-nav-btn" href="contacts.html">Контакты</a></li>
+          <li><a class="nav-btn footer-nav-btn" href="#">Доставка</a></li>
+          <li><a class="nav-btn footer-nav-btn" href="#">Гарантия</a></li>
+          <li><a class="nav-btn footer-nav-btn" href="#">Контакты</a></li>
         </ul>
-        <p class="phone">Тел.: +7 (495) 495-95-95</p>
+        <p class="phone">+7 (495) 495-95-95</p>
       </div>
-      <div class="page-footer-row footer-row-3">
-        <div class="footer-decoration"></div>
+      <div class="page-footer-row">
+        <div class="decoration"></div>
         <ul class="list social-btn-list">
-          <li><a class="social-btn facebook-btn" href="https://www.facebook.com">Facebook</a></li>
-          <li><a class="social-btn instagram-btn" href="https://www.instagram.com">Instagram</a></li>
-          <li><a class="social-btn twitter-btn" href="https://twitter.com">Twitter</a></li>
+          <li><a class="social-btn facebook-btn" href="#">Facebook</a></li>
+          <li><a class="social-btn instagram-btn" href="#">Instagram</a></li>
+          <li><a class="social-btn twitter-btn" href="#">Twitter</a></li>
         </ul>
-        <a class="htmlacademy-btn" href="https://htmlacademy.ru/intensive/htmlcss" title="Перейти на страницу htmlacademy Интенсивный онлайн‑курс Профессиональный HTML и CSS, уровень 1">
-          <img class="htmlacademy-logo" src="img/header-footer/logo-html-footer.svg" alt="логотип html academy" width="27" height="35">
+        <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy Интенсивный онлайн‑курс Профессиональный HTML и CSS, уровень 1
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+          </svg>
         </a>
       </div>
     </footer>
