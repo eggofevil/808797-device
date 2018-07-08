@@ -1186,7 +1186,7 @@ a {
 .pagination-btn:not(.back-forward-btn) {
   opacity: 0.3;
 }
-.pagination-btn[active] {
+.pagination-btn.active {
   opacity: 1;
 }
 .back-forward-btn {
