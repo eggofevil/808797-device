@@ -756,15 +756,9 @@ a {
   color: #464646;
   background: #f6dada;
 }
-.write-us-label p {
-  margin: 0;
-  margin-bottom: 6px;
-  font-size: 18px;
-  line-height: 1.333;
-  font-family: 'Gilroy', sans-serif;
-  font-weight: bold;
-}
 .write-us-field {
+  display: block;
+  margin-top: 6px;
   padding: 17px;
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
@@ -781,6 +775,12 @@ a {
   color: rgb(70, 70, 70);
   background: none;
   outline: 3px solid #f0c52e;
+}
+.write-us-label {
+  font-size: 18px;
+  line-height: 1.333;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: bold;
 }
 .name-input-label .write-us-field,
 .email-input-label .write-us-field {
