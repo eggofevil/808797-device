@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Gilroy',
+  font-family: 'Gilroy';
   src: url('../fonts/gilroyextrabold-webfont.eot');
   src: url('../fonts/gilroyextrabold-webfont.eot?#iefix') format('embedded-opentype'),
     url('../fonts/gilroyextrabold-webfont.woff2') format('woff2'),
@@ -10,7 +10,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: 'Gilroy',
+  font-family: 'Gilroy';
   src: url('../fonts/gilroylight-webfont.eot');
   src: url('../fonts/gilroylight-webfont.eot?#iefix') format('embedded-opentype'),
     url('../fonts/gilroylight-webfont.woff2') format('woff2'),
@@ -336,15 +336,15 @@ a {
   background: url('../img/index/slider/slider-button-empty.svg') no-repeat;
   background-size: 12px 12px;
 }
-#slide-1-radio:checked ~ .item-radio-labels .slide-1-label, /*cтиль для лейбла выбранного радио*/
-#slide-2-radio:checked ~ .item-radio-labels .slide-2-label,
-#slide-3-radio:checked ~ .item-radio-labels .slide-3-label {
+.slide-1-radio:checked ~ .item-radio-labels .slide-1-label, /*cтиль для лейбла выбранного радио*/
+.slide-2-radio:checked ~ .item-radio-labels .slide-2-label,
+.slide-3-radio:checked ~ .item-radio-labels .slide-3-label {
   background: url('../img/index/slider/slider-button.svg') no-repeat;
   background-size: 12px 12px;
 }
-#slide-1-radio:checked ~ .item-1-slide,
-#slide-2-radio:checked ~ .item-2-slide,
-#slide-3-radio:checked ~ .item-3-slide { /*отображаем связанный с выбранным радио блок */
+.slide-1-radio:checked ~ .item-1-slide,
+.slide-2-radio:checked ~ .item-2-slide,
+.slide-3-radio:checked ~ .item-3-slide { /*отображаем связанный с выбранным радио блок */
   display: flex;
 }
 .item-slide {
@@ -519,16 +519,16 @@ a {
   margin-bottom: 25px;
   padding-left: 2px;
 }
-#delivery-radio:checked ~ .service-radio-labels .delivery-label,
-#warranty-radio:checked ~ .service-radio-labels .warranty-label,
-#credit-radio:checked ~ .service-radio-labels .credit-label {
+.delivery-radio:checked ~ .service-radio-labels .delivery-label,
+.warranty-radio:checked ~ .service-radio-labels .warranty-label,
+.credit-radio:checked ~ .service-radio-labels .credit-label {
   background: #000000;
   color: #f7e184;
   box-shadow: 118px 0 0 #000000;
 }
-#delivery-radio:checked ~ .delivery-slide,
-#warranty-radio:checked ~ .warranty-slide,
-#credit-radio:checked ~ .credit-slide {
+.delivery-radio:checked ~ .delivery-slide,
+.warranty-radio:checked ~ .warranty-slide,
+.credit-radio:checked ~ .credit-slide {
   display: block;
 }
 .service-slide {
@@ -708,7 +708,7 @@ a {
   width: 260px;
   padding-left: 2px;
 }
-#large-map-open-radio:checked ~ .large-map {
+.large-map-open-radio:checked ~ .large-map {
   display: block;
 }
 .large-map {
@@ -737,7 +737,7 @@ a {
   left: 0;
 }
 /*write-us-form*/
-#write-us-open-radio:checked ~ .write-us-form {
+.write-us-open-radio:checked ~ .write-us-form {
   display: flex;
 }
 .write-us-form {
@@ -1039,7 +1039,7 @@ a {
 .type-sort {
   margin-right: 3px;
 }
-.sort-btn[active] {
+.sort-btn[class*="active"] {
   opacity: 1;
 }
 
