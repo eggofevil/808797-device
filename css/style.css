@@ -1075,14 +1075,16 @@ a {
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 33px;
+}
+.item-title {
+  width: 254px;
+}
+.item-title h3 {
+  margin: 0;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.333;
   letter-spacing: 0.006em;
-  white-space: pre-wrap
-}
-.item-title {
-  width: 254px;
 }
 .item-price {
   font-size: 16px;
