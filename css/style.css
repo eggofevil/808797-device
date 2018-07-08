@@ -1039,7 +1039,7 @@ a {
 .type-sort {
   margin-right: 3px;
 }
-.sort-btn[class*="active"] {
+.sort-btn.active {
   opacity: 1;
 }
 
