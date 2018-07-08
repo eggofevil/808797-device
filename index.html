@@ -16,8 +16,8 @@
         <form class="search-form" method="get" action="#" autocomplete="off">
           <label for="search" class="search-form-label">Поле ввода для поиска по сайту</label>
           <input id="search" class="action search-form-input" name="search" type="text" placeholder="Поиск по сайту">
-          <button class="search-form-button hidden" type="submit">Найти</button>
-          <div class="search-form-border display-none"></div>
+          <button class="search-form-button" type="submit">Найти</button>
+          <div class="search-form-border"></div>
         </form>
         <a class="action-header action-href login-header" href="login.html"><span>Войти</span></a>
         <a class="action-header profile-header display-none" href="profile.html">Валентин Петухов</a>
@@ -166,15 +166,15 @@
         <label class="main-btn service-style-btn credit-label" for="credit-radio">Кредит</label>
       </div>
       <section class="service-slide delivery-slide display-none">
-        <h2>Доставка</h2>
+        <h2 class="service-slide-header">Доставка</h2>
         <p>Мы с удовольствием доставим Ваш товар прямо к Вашему подъезду совершенно бесплатно! Ведь мы не плохо заработаем, поднимая его на Ваш этаж.</p>
       </section>
       <section class="service-slide warranty-slide display-none">
-        <h2>Гарантия</h2>
+        <h2 class="service-slide-header">Гарантия</h2>
         <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
       </section>
       <section class="service-slide credit-slide display-none">
-        <h2>Кредит</h2>
+        <h2 class="service-slide-header">Кредит</h2>
         <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
       </section>
     </div>
@@ -187,10 +187,10 @@
     <div class="info">
       <section class="about-us">
         <div class="info-decoration"></div>
-        <h2>O нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить Ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul class="list about-us-list">
+        <h2 class="info-header">O нас</h2>
+        <p class="info-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p class="info-text">Мы можем доставить Ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul class="list expeditor-list">
           <li>Деловые Линии</li>
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
@@ -199,8 +199,8 @@
       </section>
       <section class="contacts">
         <div class="info-decoration"></div>
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, Вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <h2 class="info-header">Контакты</h2>
+        <p class="info-text">Вы можете забрать товар сами, заехав в наш офис. Заодно, Вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <input id="large-map-open-radio" name="large-map-radio" class="display-none" type="radio">
         <input id="large-map-close-radio" name="large-map-radio" class="display-none" type="radio" checked>
         <label for="large-map-open-radio" class="small-map large-map-label">
